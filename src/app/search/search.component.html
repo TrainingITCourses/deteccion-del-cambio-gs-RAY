@@ -3,5 +3,6 @@
 </div>
 
 <div>
-  
+  <div *ngFor="let a of _agencies">{{ a?.name }}</div>
+  <!-- <div *ngFor="let a of api.getAgencies | async">{{ a?.name }}</div> -->
 </div>

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchCriteriaComponent } from './shared/search-criteria/search-criteria.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { SearchCriteriaComponent } from './shared/search-criteria/search-criteri
     SearchCriteriaComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
