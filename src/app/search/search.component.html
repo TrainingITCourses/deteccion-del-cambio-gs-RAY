@@ -1,8 +1,9 @@
 <div style="background-color: lightblue">
-  <app-search-criteria></app-search-criteria>
+  <app-search-criteria (criteria)="onChangeCriteria($event)"></app-search-criteria>
 </div>
 
+<h4>{{ criteria }}</h4>
 <div>
-  <div *ngFor="let a of _agencies">{{ a?.name }}</div>
+  <div *ngFor="let a of _data">{{ a?.name }}</div>
   <!-- <div *ngFor="let a of api.getAgencies | async">{{ a?.name }}</div> -->
 </div>

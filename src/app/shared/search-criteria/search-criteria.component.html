@@ -1,7 +1,7 @@
 <div style="display: flex; flex-direction: row; align-items: center;">
   <h3>Seleccione el criterio de búsqueda:</h3>
-  <select style="margin-left: 10px;">
-    <option selected value=""></option>
+  <select (change)="onChange($event)" style="margin-left: 10px;">
+    <option value=""></option>
     <option value="Estado">Estado</option>
     <option value="Agencia">Agencia</option>
     <option value="Tipo">Tipo</option>

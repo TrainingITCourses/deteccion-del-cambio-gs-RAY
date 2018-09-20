@@ -15,10 +15,28 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {}
 
-  getData = () => {
-    this.api
-      .getAgencies()
-      .subscribe((res: any[]) => this._data = res);
+  onChangeCriteria(criteria: string) {
+    this.getData(criteria);
+  }
+
+  getData = (criteria: string) => {
+    switch (criteria) {
+      case 'Agencia':
+        this.api
+          .getAgencies()
+          .subscribe((res: any[]) => this._data = res);
+        break;
+      case 'Estado':
+        this.api
+          .getTypesStatus()
+          .subscribe((res: any[]) => this._data = res);
+        break;
+      case 'Tipo':
+        this.api
+          .getTypesMissions()
+          .subscribe((res: any[]) => this._data = res);
+        break;
+    }
   }
 
 }
