@@ -1,0 +1,7 @@
+<div *ngIf="data?.length > 0" style="display: flex; flex-direction: row; align-items: center;">
+  <h4>Ahora seleccione el valor:</h4>
+  <select (change)="onChange($event)" style="margin-left: 10px;">
+    <option value=""></option>
+    <option *ngFor="let a of data" [value]="a.id">{{ a.name }}</option>
+  </select>
+</div>

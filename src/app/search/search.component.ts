@@ -9,17 +9,17 @@ import { ApiService } from '../services/api.service';
 })
 export class SearchComponent implements OnInit {
 
+  private _criteria: string;
   private _data: any[];
+  private _valueId: number
+  private _launches: any[];
 
   constructor(private api : ApiService) { }
 
   ngOnInit() {}
 
-  onChangeCriteria(criteria: string) {
-    this.getData(criteria);
-  }
-
-  getData = (criteria: string) => {
+  onChangeCriteria = (criteria: string) => {
+    this._criteria = criteria;
     switch (criteria) {
       case 'Agencia':
         this.api
@@ -36,7 +36,17 @@ export class SearchComponent implements OnInit {
           .getTypesMissions()
           .subscribe((res: any[]) => this._data = res);
         break;
+      default:
+        this._data = [];
+        break;
     }
+  }
+
+  onChangeValue = (value: number) => {
+    this._valueId = value;
+    this.api
+      .getLaunches(this._criteria, this._valueId)
+      .subscribe((res: any[]) => this._launches = res);
   }
 
 }

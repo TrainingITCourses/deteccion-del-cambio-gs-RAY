@@ -22,4 +22,10 @@ export class ApiService {
       .get("../../assets/launchmissions.json")
       .pipe(map((res: any) => res.types));
 
+  
+  public getLaunches = (criteria: string, id: number) : Observable<any[]> => 
+    this.httpClient
+      .get("../../assets/launchlibrary.json")
+      .pipe(map((res: any) => res.launches));
+
 }
