@@ -1,0 +1,19 @@
+.twoColumns {
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
+  height: 24px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.twoColumns::before {
+  content: '* '
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}

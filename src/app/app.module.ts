@@ -7,6 +7,7 @@ import { SearchCriteriaComponent } from './shared/search-criteria/search-criteri
 import { HttpClientModule } from '@angular/common/http';
 import { SearchValuesComponent } from './shared/search-values/search-values.component';
 import { LaunchesComponent } from './launches/launches.component';
+import { ResultsCounterComponent } from './shared/results-counter/results-counter.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { LaunchesComponent } from './launches/launches.component';
     SearchCriteriaComponent,
     SearchValuesComponent,
     LaunchesComponent,
+    ResultsCounterComponent,
   ],
   imports: [
     BrowserModule,
