@@ -17,7 +17,13 @@ export class SearchValuesComponent implements OnInit {
   }
 
   onChange = (event) => {
+    console.log('onChange - values');
     this.value.next(+event.srcElement.value);
+  }
+
+  dameData = () => {
+    console.log('dameData - values');
+    return this.data;
   }
 
 }

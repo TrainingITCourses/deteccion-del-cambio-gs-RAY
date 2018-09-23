@@ -15,4 +15,13 @@ export class ResultsCounterComponent implements OnInit {
   ngOnInit() {
   }
 
+  dameNumLanzamientos = () => {
+    console.log('Pasamos por dameNumLanzamientos');
+    if (this.data) {
+      return this.data.length;
+    } else {
+      return 0;
+    }
+  }
+
 }

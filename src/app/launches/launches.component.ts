@@ -15,4 +15,9 @@ export class LaunchesComponent implements OnInit {
   ngOnInit() {
   }
 
+  dameData = () => {
+    console.log('Pasamos por dameData');
+    return this.data;
+  }
+
 }

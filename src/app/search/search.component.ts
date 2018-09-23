@@ -19,7 +19,10 @@ export class SearchComponent implements OnInit {
   ngOnInit() {}
 
   onChangeCriteria = (criteria: string) => {
+    console.log('onChangeCriteria: ' + criteria);
+
     this._criteria = criteria;
+    this._launches = [];
     switch (criteria) {
       case 'Agencia':
         this.api
@@ -43,6 +46,8 @@ export class SearchComponent implements OnInit {
   }
 
   onChangeValue = (value: number) => {
+    console.log('onChangeValue: ' + value);
+
     this._valueId = value;
     this.api
       .getLaunches(this._criteria, this._valueId)

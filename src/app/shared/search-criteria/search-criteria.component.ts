@@ -10,14 +10,13 @@ export class SearchCriteriaComponent implements OnInit {
 
   @Output() public criteria = new EventEmitter<string>();
 
-  selected="";
-
   constructor() { }
 
   ngOnInit() {
   }
 
   onChange = (event) => {
+    console.log('onChange - criteria');
     this.criteria.next(event.srcElement.value);
   }
 
